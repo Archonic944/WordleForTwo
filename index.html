@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNR15ZWEVB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RNR15ZWEVB');
+</script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://kit.fontawesome.com/6f3a6d4b55.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Wordle For Two</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="/w42_favicon.png">
+</head>
+
+<body>
+    <img src=w42_banner_alT.png id="header" style="margin:0px;padding:0px;" alt="Wordle For Two"></img>
+  <span id="phase1" style="color:White">
+    <br>
+    <br>
+    <span style="color:rgb(189,164,166)" id="p1header"><strong>Player 1</strong></span>
+    <br>
+    Pick your five-letter word for player 2 to guess.
+    <br>
+    Don't let them see!
+    <br>
+    <br>
+    You can pass 'n play on this device, or get a link to share with your friends.
+    <br>
+    <br>
+    <label for="word" style="color:White">Your secret word:</label>
+    <input type="text" id="word" name="word" autocomplete="off">
+    <br>
+    <div class="spacer"></div>
+    <div id="buttons-container">
+      <button type="button" id="wordentry">Play here</button><!--
+    --><button type="button" id="sendlink">Share link</button>
+    </div>
+    <br>
+    <label for="hideinput">Make my input look secret</label>
+    <input type="checkbox" id="hideinput"></input>
+    <p style="color:Gray" hidden="false" id="warn">Must be a real five-letter
+      word!</p>
+  </span>
+  <div id="phase2" hidden="true">
+    <p style="color:Cyan"><strong>Player 2</strong></p>
+    <div id="board-container">
+      <div id="board">
+
+      </div>
+    </div>
+    <br>
+    <div id="keyboard-container">
+      <div class="keyboard-row">
+        <button data-key="q">q</button>
+        <button data-key="w">w</button>
+        <button data-key="e">e</button>
+        <button data-key="r">r</button>
+        <button data-key="t">t</button>
+        <button data-key="y">y</button>
+        <button data-key="u">u</button>
+        <button data-key="i">i</button>
+        <button data-key="o">o</button>
+        <button data-key="p">p</button>
+      </div>
+      <div class="keyboard-row">
+        <div class="spacer-half"></div>
+        <button data-key="a">a</button>
+        <button data-key="s">s</button>
+        <button data-key="d">d</button>
+        <button data-key="f">f</button>
+        <button data-key="g">g</button>
+        <button data-key="h">h</button>
+        <button data-key="j">j</button>
+        <button data-key="k">k</button>
+        <button data-key="l">l</button>
+        <div class="spacer-half"></div>
+      </div>
+      <div class="keyboard-row">
+        <button data-key="enter" class="wide-button">enter</button>
+        <button data-key="z">z</button>
+        <button data-key="x">x</button>
+        <button data-key="c">c</button>
+        <button data-key="v">v</button>
+        <button data-key="b">b</button>
+        <button data-key="n">n</button>
+        <button data-key="m">m</button>
+        <button data-key="del" class="wide-button">back</button>
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>
+</body>
+
+</html>
+<script src="wordlist.js"></script>
+<script src="script.js"></script>
