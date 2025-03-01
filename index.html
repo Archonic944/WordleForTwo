@@ -48,7 +48,7 @@
     </div>
     <br>
     <label for="hideinput">Make my input look secret</label>
-    <input type="checkbox" id="hideinput"></input>
+    <input type="checkbox" id="hideinput">
     <p style="color:Gray" hidden="false" id="warn">Must be a real five-letter
       word!</p>
     <div id="new-event-box" class="expandable-box">
@@ -56,7 +56,7 @@
         <strong>New Event: Who are you?</strong>
     </div>
     <div id="box-content" class="box-content" style="display: none;">
-        <p>I made this website as a gift for my dad's birthday. I never anticipated that it would have upwards of 60 daily active users (thank you!).
+        <p>We made this website as a gift for our dad's birthday. I never anticipated that it would have upwards of 60 daily active users (thank you!).
         I thought it might be nice to get to know my user base. Who are you? Are you a student playing on a school laptop? Someone who likes sending their coworkers unreasonably difficult WordleForTwo links and watching them suffer?
         Not a person at all; just a robot built to trick me into thinking I have users? <br><br>Whoever you may be, just tell me. Maybe a couple fun facts about yourself, if you like the site, and your name + where you're from. The winning entry will receive <strong>$200</strong>.</p>
         <input type="text" id="userResponse" name="userResponse" placeholder="Enter your response...">
@@ -132,7 +132,7 @@
       },
       body: JSON.stringify({ response: response })
     }).then(response => {
-      alert("Your response has been received. Also, you're not getting $200. Get scammed.");
+      alert("We received your response. Thank you! Also, I know I said there was a $200 prize, but... there's not. Sorry.");
     }).catch(error => {
       console.error("Error submitting response:", error);
     });
