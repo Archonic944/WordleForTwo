@@ -2,16 +2,16 @@
 <html>
 
 <head>
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNR15ZWEVB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-RNR15ZWEVB');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNR15ZWEVB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RNR15ZWEVB');
+  </script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <script src="https://kit.fontawesome.com/6f3a6d4b55.js" crossorigin="anonymous"></script>
@@ -24,8 +24,8 @@
 </head>
 
 <body>
-    <img src=w42_banner_alT.png id="header" style="margin:0;padding:0;image-rendering: pixelated;" alt="Wordle For Two"></img>
-  <span id="phase1" style="color:White">
+<img src=w42_banner_alT.png id="header" style="margin:0;padding:0;image-rendering: pixelated;" alt="Wordle For Two"></img>
+<span id="phase1" style="color:White">
     <br>
     <br>
     <span style="color:rgb(189,164,166)" id="p1header"><strong>Player 1</strong></span>
@@ -51,58 +51,95 @@
     <input type="checkbox" id="hideinput"></input>
     <p style="color:Gray" hidden="false" id="warn">Must be a real five-letter
       word!</p>
+    <div id="new-event-box" class="expandable-box">
+    <div class="box-header" onclick="toggleBox()">
+        <strong>New Event: Who are you?</strong>
+    </div>
+    <div id="box-content" class="box-content" style="display: none;">
+        <p>I made this website as a gift for my dad's birthday. I never anticipated that it would have upwards of 60 daily active users (thank you!).
+        I thought it might be nice to get to know my user base. Who are you? Are you a student playing on a school laptop? Someone who likes sending their coworkers unreasonably difficult WordleForTwo links and watching them suffer?
+        Not a person at all; just a robot built to trick me into thinking I have users? <br><br>Whoever you may be, just tell me. Maybe a couple fun facts about yourself, if you like the site, and your name + where you're from. The winning entry will receive <strong>$200</strong>.</p>
+        <input type="text" id="userResponse" name="userResponse" placeholder="Enter your response...">
+        <button onclick="submitResponse()">Submit</button>
+    </div>
+</div>
   </span>
-  <div id="phase2" hidden="true">
-    <p style="color:Cyan"><strong>Player 2</strong></p>
-    <div id="board-container">
-      <div id="board">
 
-      </div>
+<div id="phase2" hidden="true">
+  <p style="color:Cyan"><strong>Player 2</strong></p>
+  <div id="board-container">
+    <div id="board">
+
     </div>
-    <br>
-    <div id="keyboard-container">
-      <div class="keyboard-row">
-        <button data-key="q">q</button>
-        <button data-key="w">w</button>
-        <button data-key="e">e</button>
-        <button data-key="r">r</button>
-        <button data-key="t">t</button>
-        <button data-key="y">y</button>
-        <button data-key="u">u</button>
-        <button data-key="i">i</button>
-        <button data-key="o">o</button>
-        <button data-key="p">p</button>
-      </div>
-      <div class="keyboard-row">
-        <div class="spacer-half"></div>
-        <button data-key="a">a</button>
-        <button data-key="s">s</button>
-        <button data-key="d">d</button>
-        <button data-key="f">f</button>
-        <button data-key="g">g</button>
-        <button data-key="h">h</button>
-        <button data-key="j">j</button>
-        <button data-key="k">k</button>
-        <button data-key="l">l</button>
-        <div class="spacer-half"></div>
-      </div>
-      <div class="keyboard-row">
-        <button data-key="enter" class="wide-button">enter</button>
-        <button data-key="z">z</button>
-        <button data-key="x">x</button>
-        <button data-key="c">c</button>
-        <button data-key="v">v</button>
-        <button data-key="b">b</button>
-        <button data-key="n">n</button>
-        <button data-key="m">m</button>
-        <button data-key="del" class="wide-button">back</button>
-      </div>
-    </div>
-    <br>
-    <br>
   </div>
+  <br>
+  <div id="keyboard-container">
+    <div class="keyboard-row">
+      <button data-key="q">q</button>
+      <button data-key="w">w</button>
+      <button data-key="e">e</button>
+      <button data-key="r">r</button>
+      <button data-key="t">t</button>
+      <button data-key="y">y</button>
+      <button data-key="u">u</button>
+      <button data-key="i">i</button>
+      <button data-key="o">o</button>
+      <button data-key="p">p</button>
+    </div>
+    <div class="keyboard-row">
+      <div class="spacer-half"></div>
+      <button data-key="a">a</button>
+      <button data-key="s">s</button>
+      <button data-key="d">d</button>
+      <button data-key="f">f</button>
+      <button data-key="g">g</button>
+      <button data-key="h">h</button>
+      <button data-key="j">j</button>
+      <button data-key="k">k</button>
+      <button data-key="l">l</button>
+      <div class="spacer-half"></div>
+    </div>
+    <div class="keyboard-row">
+      <button data-key="enter" class="wide-button">enter</button>
+      <button data-key="z">z</button>
+      <button data-key="x">x</button>
+      <button data-key="c">c</button>
+      <button data-key="v">v</button>
+      <button data-key="b">b</button>
+      <button data-key="n">n</button>
+      <button data-key="m">m</button>
+      <button data-key="del" class="wide-button">back</button>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>
+
+
+
+<script>
+  function toggleBox() {
+    var content = document.getElementById("box-content");
+    content.style.display = content.style.display === "none" ? "block" : "none";
+  }
+
+  function submitResponse() {
+    var response = document.getElementById("userResponse").value;
+    fetch("https://eokhtxsn01cpax8.m.pipedream.net", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ response: response })
+    }).then(response => {
+      alert("Your response has been received. Also, you're not getting $200. Get scammed.");
+    }).catch(error => {
+      console.error("Error submitting response:", error);
+    });
+  }
+</script>
+<script src="wordlist.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
-<script src="wordlist.js"></script>
-<script src="script.js"></script>

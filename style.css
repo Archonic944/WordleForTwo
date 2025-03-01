@@ -94,3 +94,34 @@ html, body {
     }
   .
 }
+
+#new-event-box {
+  width: min(80%, 30rem);
+  background-color: #ead67d;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px auto;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+#new-event-box .box-header {
+  font-size: 18px;
+}
+
+#new-event-box .box-content {
+  padding: 10px;
+}
+
+#new-event-box input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 5px;
+}
+
+#new-event-box button {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 10px;
+}

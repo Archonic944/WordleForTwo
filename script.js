@@ -209,8 +209,10 @@
       if(target.checked) other.type = "password";
       else other.type = "text";
     }
+    console.log("adding play button listener");
     //play button listener
     document.getElementById("wordentry").addEventListener("click", () => {
+      console.log("hey");
       let element = document.getElementById("word");
       let wordEntered = element.value.toLowerCase();
       startPhase2(wordEntered);
